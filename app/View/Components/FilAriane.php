@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Heros_Section extends Component
+class FilAriane extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Heros_Section extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.heros_-section');
+        return view('components.fil-ariane');
     }
 }
