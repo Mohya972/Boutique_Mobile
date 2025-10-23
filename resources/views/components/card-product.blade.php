@@ -15,7 +15,7 @@
         </p> 
         <div class="flex items-center justify-between">
             <span class="text-2-xl font-bold text-purple-600"> {{$product->price}}€ </span>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"> Ajouter </button>
+            <a href="{{route('boutiques.show', $product->id)}}" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"> Voir </a>
         </div>
         
     </div>
