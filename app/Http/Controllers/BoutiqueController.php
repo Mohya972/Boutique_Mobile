@@ -11,12 +11,13 @@ class BoutiqueController extends Controller
     // Affiche une liste de la ressource
     public function index()
     {
-        // Récupère la liste des éléments
-        $products = Product::All();
-        $categories = Category::All();
+        // Récupère 6 produits
+        $products = Product::limit(6)->get();
+
+        // $categories = Category::limit(6)->get();
 
         // Affiche la liste
-        return view('index', compact('products', 'categories'));
+        return view('index', compact('products'));
     }
 
     /**
