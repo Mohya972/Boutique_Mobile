@@ -9,12 +9,16 @@ use Illuminate\Contracts\View\View;
 
 class CardProduct extends Component
 {
+    
+    public $product; // informations pour le produit
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(Product $product)
     {
         //
+        $this->product = $product;
+        
     }
 
     /**
@@ -22,7 +26,7 @@ class CardProduct extends Component
      */
     public function render(): View|Closure|string
     {
-        $products = Product::All();
+        $products = Product::limit(8)->get();
         
         return view('components.card-product', compact('products'));
     }
