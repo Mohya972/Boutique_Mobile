@@ -20,6 +20,12 @@ class Product extends Model
         'price'
     ];
 
+    // Convertir automatiquement les types de données
+    protected $casts = [
+        'news' => 'boolean',
+        'price' => 'decimal:2'
+    ];
+    
     // Liaison ELOQUENT BELONGS TO pour lire le contenu de la catégorie du produit
     public function category(): BelongsTo
     {
